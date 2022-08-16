@@ -16,6 +16,7 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
+  /* background-color: #03e9f4; */
   /* background: linear-gradient(#141e30, #243b55); */
 }
 
@@ -181,3 +182,5 @@ body {
     <title>Document</title>
 </head>
 <body>
+
+<?php  include('../basics/navbar.php')?>
