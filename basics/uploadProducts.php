@@ -11,6 +11,6 @@
     <input type="text" name="description" required="">
       
     </div>
-    <button type="submit" name="add">Add</button>
+    <button type="submit" name="submit">Add</button>
   </form>
 </div>

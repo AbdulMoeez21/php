@@ -1,56 +1,51 @@
 <?php
 include('./header.php');
 include("./connection.php");
+
+
+if (isset($_GET['id'])) {
+  // echo $_GET['id'];
+  $id = $_GET['id'];
+
+  $sql = 'SELECT * FROM `product_table` where Id = ' . $id . ' ';
+  // echo $sql;
+
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+  } else {
+    echo "Invalid Id .. ";
+    // header("Location: http://localhost/login/basics/product_table_add.php");
+  }
+}
 ?>
 
-<?php
-  function getById($product_table, $id)
-    {
-      global $connection;
-      $sql = "SELECT * FROM $product_table WHERE Id='$id' ";
-      return $sql_run = mysqli_query($connection, $sql);
-    }
-?>
 
 
 
 <div class="container py-5">
   <h1 class="text-primary">Edit Product </h1>
-  <?php
-  if (isset($_GET['Id'])) {
-    $Id = $_GET['Id'];
-    $product = getById("products", $Id);
-    if (mysqli_num_rows($product) > 0) {
-      $data = mysqli_fetch_array($product);
-      foreach ($items as $ai) {
-  ?>
-        <form method="get" action="./product_table_add.php">
-          <div class="user-box">
-            <label>Product Name</label>
-            <input type="text" name="proname" required="" scope="row" value="<?php $ai['Id'] ?>" <?php $data['Id'] == $ai['Id'] ? '' : '' ?> <?php $ai['Name'] ?>>
 
-          </div>
-          <div class="user-box">
-            <label>Description</label>
-            <input type="text" name="description" required="" value=" ">
+  <div class="login-box">
+    <h2>Upload Prodcuts</h2>
+    <form method="post" action="./updateProduct.php">
+      <input type="number" value=<?php echo $row['Id'] ?>  name="productId"  >
+      <div class="user-box">
+        <!-- <label>Product Name</label> -->
+        
+        <input type="text" name="proname" required="" value="<?php echo $row['Name'] ?> ">
 
-          </div>
-          <button type="submit" name="update">Updated</button>
-        </form>
-      <?php
-      }
+      </div>
+      <div class="user-box">
+        <!-- <label>Description</label> -->
+        <input type="text" name="description" required="" value="<?php echo $row['Description'] ?>" ">
 
-      ?>
+      </div>
+      <button type=" submit" name="submit">Update</button>
+    </form>
+  </div>
 
-  <?php
-    } else {
-      echo "product not found on given id";
-    }
-  } else {
-    echo "Id missing";
-  }
-
-  ?>
 
 
 
