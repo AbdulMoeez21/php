@@ -5,15 +5,9 @@ include ('./includes/Header.php');
 
 
 
-<div class="container">
+
 <!-- navbar -->
 
-<nav class="nav bg-secondary p-2">
-  <a class="nav-link text-info active" aria-current="page" href="#">Active</a>
-  <a class="nav-link text-info" href="#">Link</a>
-  <a class="nav-link text-info" href="#">Link</a>
-  
-</nav>
 <!-- slider -->
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -44,10 +38,13 @@ include ('./includes/Header.php');
 </div>
 
 
-
 <!-- cards -->
 
-<div class="card m-5" style="width: 18rem;">
+<div class="container">
+<div class="row d-flex flex-row">
+
+<div class="col-4 ">
+<div class="card m-5">
   <img src="./imgs/1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -56,6 +53,66 @@ include ('./includes/Header.php');
   </div>
 </div>
 </div>
+
+<div class="col-4">
+<div class="card m-5">
+  <img src="./imgs/1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+<div class="col-4">
+<div class="card m-5" >
+  <img src="./imgs/1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+<div class="col-4 ">
+<div class="card m-5">
+  <img src="./imgs/1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+<div class="col-4">
+<div class="card m-5" >
+  <img src="./imgs/1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+<div class="col-4 ">
+<div class="card m-5">
+  <img src="./imgs/1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>
+
 <?php
 include ('./includes/Footer.php'); 
 ?>
