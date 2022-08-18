@@ -3,7 +3,7 @@
 $hostname="localhost";
 $userName="root";
 $password="";
-$db="login_db";
+$db="cubix";
 
 $conn=mysqli_connect($hostname,$userName,$password,$db);
 if(!$conn){
