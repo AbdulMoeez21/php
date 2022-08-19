@@ -50,8 +50,8 @@ $row = mysqli_fetch_assoc($result)
                 $result = mysqli_query($conn, $sql);
 
                 $row = mysqli_fetch_assoc($result);
-
-                while ($row = mysqli_fetch_assoc($result)) {
+              ?>  <h3>Recent Blogs</h3>
+<?php                while ($row = mysqli_fetch_assoc($result)) {
 
                     // echo var_dump($row) ;
 

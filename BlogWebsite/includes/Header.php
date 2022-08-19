@@ -40,7 +40,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="/blogs">Blogs</a>
+            <a class="nav-link " href="../BlogWebsite/Blogs.php">Blogs</a>
           </li>
           
           <li class="nav-item">
