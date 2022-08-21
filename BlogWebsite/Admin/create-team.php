@@ -67,58 +67,32 @@
                                         <h4 class="card-title">Add new Team Member</h4>
                                     </div>
                                     <div class="card-body">
+                                    <form action="Submit-Team.php" method="post" enctype="multipart/form-data" >
                                         <div class="form-row">
-                                            <div class="form-group col-md-6 mb-0">
+                                            <div class="form-group col-md-12 mb-0">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" id="name1" placeholder="First Name">
+                                                    <input type="text" class="form-control" id="name1" name="Name" placeholder="Full Name">
                                                 </div>
                                             </div>
-                                            <div class="form-group col-md-6 mb-0">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="name2" placeholder="Last Name">
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                         <div class="form-group ">
-                                            <input type="email" class="form-control" id="inputEmail5" placeholder="Email Address" autocomplete="username">
+                                            <input type="email" class="form-control" id="inputEmail5" name="Email" placeholder="Email Address" autocomplete="username">
                                         </div>
                                         <div class="form-group ">
-                                            <input type="text" class="form-control" id="address" placeholder="AddressLine1">
+                                            <input type="text" class="form-control" id="address" name="Address" placeholder="Address">
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6 mb-0">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="country" placeholder="Country">
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-0">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="region" placeholder="Country/Region">
-                                                </div>
-                                            </div>
+                                        <div class="form-group ">
+                                            <input type="number" class="form-control" id="address" name="Number" placeholder="Phone Number">
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6 mb-0">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="city" placeholder="City">
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-0">
-                                                <div class="form-group">
-                                                    <input type="number" class="form-control" id="postal" placeholder="Zip/Postal">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-12 mb-5 mt-3 mb-lg-0">
-                                        Attach your cv.
-                                                    <input type="file" class="dropify" data-bs-height="180" />
-                                                </div>
 
                                         <div class="form-footer mt-5">
-                                            <a href="javascript:void(0)" class="btn btn-primary">Confirm  Details</a>
+                                        <button class="btn btn-primary mt-4 mb-0" type="submit" name="submit"> Submit</button>
                                         </div>
+</form>
                                     </div>
                             </div>
+</div>
                         </div>
                     </div>
                 </div>

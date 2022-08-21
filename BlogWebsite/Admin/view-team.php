@@ -70,63 +70,53 @@
                                             <table class="table table-bordered border text-nowrap mb-0" id="basic-edit">
                                                 <thead>
                                                     <tr>
-                                                        <th>First name</th>
-                                                        <th>Last name</th>
-                                                        <th>Position</th>
-                                                        <th>Start date</th>
-                                                        <th>Salary</th>
-                                                        <th>E-mail</th>
+                                                        <th>S.No</th>
+                                                        <th>Full Name</th>
+                                                        <th>Email </th>
+                                                        <th>Address</th>
+                                                        <th>Number</th>
+                                                        <th>Joining Date</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Bella</td>
-                                                        <td>Chloe</td>
-                                                        <td>System Developer</td>
-                                                        <td>2018/03/12</td>
-                                                        <td>$654,765</td>
-                                                        <td>b.Chloe@datatables.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Donna</td>
-                                                        <td>Bond</td>
-                                                        <td>Account Manager</td>
-                                                        <td>2012/02/21</td>
-                                                        <td>$543,654</td>
-                                                        <td>d.bond@datatables.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Harry</td>
-                                                        <td>Carr</td>
-                                                        <td>Technical Manager</td>
-                                                        <td>20011/02/87</td>
-                                                        <td>$86,000</td>
-                                                        <td>h.carr@datatables.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Lucas</td>
-                                                        <td>Dyer</td>
-                                                        <td>Javascript Developer</td>
-                                                        <td>2014/08/23</td>
-                                                        <td>$456,123</td>
-                                                        <td>l.dyer@datatables.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Karen</td>
-                                                        <td>Hill</td>
-                                                        <td>Sales Manager</td>
-                                                        <td>2010/7/14</td>
-                                                        <td>$432,230</td>
-                                                        <td>k.hill@datatables.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Dominic</td>
-                                                        <td>Hudson</td>
-                                                        <td>Sales Assistant</td>
-                                                        <td>2015/10/16</td>
-                                                        <td>$654,300</td>
-                                                        <td>d.hudson@datatables.net</td>
-                                                    </tr>
+                                                   
+                                                        
+                                                <?php
+
+include("../database/connection.php");
+
+$sql = 'SELECT * FROM `team_table`';
+$result = mysqli_query($conn, $sql);
+
+$row = mysqli_fetch_assoc($result);
+$sno = 0;
+while ($row = mysqli_fetch_assoc($result)) {
+
+    // echo var_dump($row) ;
+
+    $sno ++;
+?>
+<tr>
+    <td><?php echo  $sno ?></td>
+    <td><?php echo  $row['Name'] ?></td>
+    <td><?php echo  $row['Email'] ?></td> 
+     <td><?php echo  $row['Address'] ?></td>
+    <td><?php echo  $row['Number'] ?></td>
+    <td><?php echo  $row['Joining_Date'] ?></td>
+    </tr>
+
+<?php
+
+
+}
+
+
+
+
+?>
+
+
+
                                                 </tbody>
                                             </table>
                                         </div>
