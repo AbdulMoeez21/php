@@ -26,7 +26,7 @@ if (isset($_POST['title'])) {
     $file_ext_check = strtolower(end($file_ext));
     // echo $file_ext_check;
 
-    $valid_file_ext = array('png', 'jpg', 'jpeg');
+    $valid_file_ext = array('png', 'jpg', 'jpeg', 'jfif');
 
     if ($fileerror == 0) {
         // file extension
