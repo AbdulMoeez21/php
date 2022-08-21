@@ -19,7 +19,7 @@
 
       <div class="col-12 col-md-6 col-xl-4 ">
         <div class="card m-5">
-          <img src="./assets/Blog_Images/<?php echo  $row['blog_img'] ?>" class="card-img-top" alt="...">
+          <img src="./uploads/Blogs/<?php echo  $row['blog_img'] ?>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><?php echo  $row['title'] ?></h5>
             <p class="card-text"><?php echo  $row['short_desc'] ?></p>

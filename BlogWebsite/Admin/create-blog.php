@@ -43,6 +43,8 @@
     <!-- /GLOBAL-LOADER -->
 
     <!-- PAGE -->
+
+  
     <div class="page">
         <div class="page-main">
 
@@ -67,7 +69,7 @@
                                         <h4 class="card-title">Create a New Blog</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="Submit-Blog.php" method="post" enctype="multipart/form-data" >
                                             <div class="">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1" class="form-label">Title</label>
@@ -89,14 +91,14 @@
 
 
                                                 <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
-                                                    <input type="file" class="dropify" data-bs-height="180" />
+                                                    <input type="file" class="dropify" name="blog_img" data-bs-height="180" />
                                                 </div>
 
 
                                             </div>
 
                                     </div>
-                                    <button class="btn btn-primary mt-4 mb-0">Submit</button>
+                                    <button class="btn btn-primary mt-4 mb-0" type="submit" name="submit"> Submit</button>
                                     </form>
                                 </div>
                             </div>
