@@ -41,6 +41,20 @@
                                     
                                 </ul>
                             </li>
+
+                            <!-- view -->
+                            <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                                        class="side-menu__icon fe fe-slack"></i><span
+                                        class="side-menu__label">Team</span><i
+                                        class="angle fe fe-chevron-right"></i></a>
+                                <ul class="slide-menu">
+                                   
+                                    <li><a href="create-team.php" class="slide-item"> Create Team</a></li>
+                                    <li><a href="view-team.php" class="slide-item"> View Team</a></li>
+                                    
+                                </ul>
+                            </li>
                     
                         </ul>
                         <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
