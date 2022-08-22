@@ -8,7 +8,7 @@
     $sql = 'SELECT * FROM `Blog`';
     $result = mysqli_query($conn, $sql);
 
-    $row = mysqli_fetch_assoc($result);
+
   
     while ($row = mysqli_fetch_assoc($result)) {
 

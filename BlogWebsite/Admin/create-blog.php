@@ -44,7 +44,7 @@
 
     <!-- PAGE -->
 
-  
+
     <div class="page">
         <div class="page-main">
 
@@ -69,7 +69,7 @@
                                         <h4 class="card-title">Create a New Blog</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form action="Submit-Blog.php" method="post" enctype="multipart/form-data" >
+                                        <form action="Submit-Blog.php" method="post" enctype="multipart/form-data">
                                             <div class="">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1" class="form-label">Title</label>
@@ -83,10 +83,82 @@
                                                     <label for="exampleInputEmail1" class="form-label"> Description</label>
                                                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Description" autocomplete="username" name="long_desc">
                                                 </div>
+
+
+
+                                                <div class="form-group select2-lg">
+                                                    <label class="form-label">Categories</label>
+                                                    <select  class="form-control form-select form-select-lg select2" data-bs-placeholder="Select Country" id="category" name="category">
+
+                                                        <option value="" default>Select Category</option>
+                                                        <?php
+                                                        include("../database/connection.php");
+
+                                                        $sql = 'SELECT * FROM `categories`';
+                                                        $result = mysqli_query($conn, $sql);
+
+
+
+                                                        while ($row = mysqli_fetch_assoc($result)) {
+
+                                                            // echo var_dump($row) ;
+
+
+                                                        ?>
+
+                                                            <option value=<?php echo $row['id']; ?>><?php echo $row['name']; ?></option>
+
+
+                                                        <?php
+
+
+                                                        }
+                                                        ?>
+
+
+                                                    </select>
+
+                                                </div>
+
+
+                                                <div class="form-group select2-lg">
+                                                    <label class="form-label">Categories</label>
+                                                    <select class="form-control form-select form-select-lg select2" data-bs-placeholder="Select Country" id="sub_categories" name="sub_category">
+
+                                                    </select>
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1" class="form-label"> Author</label>
                                                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Author" autocomplete="username" name="author">
                                                 </div>
+
+                                                <script>
+                                                    let category = document.getElementById('category')
+                                                    let sub_categories = document.getElementById('sub_categories')
+
+
+                                                    category.addEventListener('change', (e) => {
+                                                        console.log(e.target.value);
+
+                                                        const id = e.target.value;
+
+                                                        $.ajax({
+                                                            url: "get_sub_category.php",
+                                                            type: "post",
+                                                            data: {
+                                                                category_id: id
+                                                            },
+                                                            success: function(response) {
+
+                                                                // You will get response from your PHP page (what you echo or print)
+                                                                sub_categories.innerHTML=response;
+                                                                console.log(response)
+                                                            },
+
+
+                                                        })
+                                                    })
+                                                </script>
 
 
 

@@ -9,6 +9,8 @@ if (isset($_POST['title'])) {
     $Short_Description = mysqli_real_escape_string($conn, $_POST['short_desc']);
     $Long_Description = mysqli_real_escape_string($conn, $_POST['long_desc']);
     $Author = $_POST['author'];
+    $Category = $_POST['category'];
+    $Sub_category = $_POST['sub_category'];
 
 
 
@@ -49,7 +51,7 @@ if (isset($_POST['title'])) {
 
 
 
-            $sql = 'INSERT INTO `blog`( `title`, `short_desc`, `long_desc`, `category`, `blog_img`, `addedBy`) VALUES ("' . $Title . '","' . $Short_Description . '","' . $Long_Description . '","Computer Science","' . $newfilename . '","Admin")';
+            $sql = 'INSERT INTO `blog`( `title`, `short_desc`, `long_desc`, `blog_img`, `addedBy` ,`category`,`sub_category`) VALUES ("' . $Title . '","' . $Short_Description . '","' . $Long_Description . '","' . $newfilename . '","Admin" ,"'. $Category.'","'. $Sub_category.'")';
             $result = mysqli_query($conn, $sql);
 
             // echo $sql;
