@@ -69,11 +69,11 @@
                                         <h4 class="card-title">Add New Category</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form action="Submit-Caregory.php" method="post" enctype="multipart/form-data" >
+                                        <form action="Submit-Category.php" method="post" enctype="multipart/form-data" >
                                             <div class="">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1" class="form-label">Category</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" autocomplete="username" name="title">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Add Category" autocomplete="username" name="category">
                                                 </div>
                                         
 

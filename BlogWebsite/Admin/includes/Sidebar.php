@@ -64,7 +64,7 @@
                                         class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                    
-                                    <li><a href="add-category.php" class="slide-item"> Add Category</a></li>
+                                    <li><a href="create-category.php" class="slide-item"> Add Category</a></li>
                                    
                                     
                                 </ul>
